@@ -1,0 +1,20 @@
+#ifndef IMPACTPOINTS
+#define IMPACTPOINTS
+
+#include <vector>
+#include "vec.h"
+
+class impactPoints {
+public:
+	impactPoints();
+	// generates randomized points to use for voronoi generation
+	impactPoints(vec3 impactLocation, vec3 force, int numPoints);
+	~impactPoints();
+	void draw();
+private:
+	vector<vec3> generatedPoints;
+protected:
+	vector<vec3> points();
+};
+
+#endif

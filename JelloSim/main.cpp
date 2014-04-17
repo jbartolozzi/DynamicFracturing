@@ -7,14 +7,15 @@
 #include <IL/il.h>
 #include <IL/ilu.h>
 #include <IL/ilut.h>
-
+#include "impactPoints.h"
 #include "jelloMesh.h"
 #include "world.h"
 
 JelloMesh theJello;
 Camera theCamera;
-World theWorld("worlds/spheres.xml");
+World theWorld("worlds/ground.xml");
 mmc::FpsTracker theFpsTracker;
+impactPoints ips;
 
 // UI Helpers
 int lastX = 0, lastY = 0;
@@ -178,7 +179,7 @@ void onTimerCb(int value)
    glutTimerFunc(100, onTimerCb, 0);
    if (isRunning) 
    {
-       theJello.Update(0.01, theWorld);
+       //theJello.Update(0.01, theWorld);
 	   if (isRecording) theJello.outputVertices(theFrameNum);
    }
 
@@ -262,13 +263,14 @@ void onDrawCb()
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     theCamera.draw();
-    //drawAxes();
+    drawAxes();
 
     vec3 cpos = theCamera.getPosition();
     float pos[4] = {cpos[0], cpos[1]+2.0, cpos[2],0.0};
     glLightfv(GL_LIGHT0, GL_POSITION, pos);
 
     theWorld.Draw();
+	ips.draw();
     //theJello.Draw(cpos);
     drawOverlay();
     glutSwapBuffers();
@@ -390,7 +392,7 @@ int loadJelloParameters(char* filename) throw (char*)
 			}
 		}
 		cout << "Loaded jello parameters from " << filename << endl;
-		theJello.Reset();
+		//theJello.Reset();
 		return 0;    // normal
 	} else {
 		return 1;    // fail to open file
@@ -400,6 +402,7 @@ int loadJelloParameters(char* filename) throw (char*)
 void init(void)
 {
     initCamera();
+	ips = impactPoints(vec3(0,1,0),vec3(1,1,1),20);
     glClearColor(0.8, 0.8, 0.8, 1.0);
 
     glEnable(GL_BLEND);
@@ -412,7 +415,6 @@ void init(void)
 
     glEnable(GL_NORMALIZE);
     glCullFace(GL_FRONT);
-
 
     float white[4] = {1.0,1.0,1.0,1.0};
     float black[4] = {0.0,0.0,0.0,1.0};

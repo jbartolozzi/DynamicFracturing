@@ -72,6 +72,7 @@
     <ClInclude Include="camera.h" />
     <ClInclude Include="clock.h" />
     <ClInclude Include="fps.h" />
+    <ClInclude Include="impactPoints.h" />
     <ClInclude Include="jelloMesh.h" />
     <ClInclude Include="matrix.h" />
     <ClInclude Include="timer.h" />
@@ -81,6 +82,7 @@
   <ItemGroup>
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="fps.cpp" />
+    <ClCompile Include="impactPoints.cpp" />
     <ClCompile Include="jelloMesh.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="vec.cpp" />
