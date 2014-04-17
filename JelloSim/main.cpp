@@ -269,7 +269,7 @@ void onDrawCb()
     float pos[4] = {cpos[0], cpos[1]+2.0, cpos[2],0.0};
     glLightfv(GL_LIGHT0, GL_POSITION, pos);
 
-    theWorld.Draw();
+    //theWorld.Draw();
 	ips.draw();
     //theJello.Draw(cpos);
     drawOverlay();
@@ -402,7 +402,7 @@ int loadJelloParameters(char* filename) throw (char*)
 void init(void)
 {
     initCamera();
-	ips = impactPoints(vec3(0,1,0),vec3(1,1,1),20);
+	ips = impactPoints(vec3(0,1,0),vec3(1,1,1),1000);
     glClearColor(0.8, 0.8, 0.8, 1.0);
 
     glEnable(GL_BLEND);

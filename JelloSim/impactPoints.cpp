@@ -8,13 +8,28 @@ impactPoints::impactPoints()
 
 impactPoints::impactPoints(vec3 impactLocation, vec3 force, int numPoints)
 {
+	float rSquared = force.Length();
+	rSquared *= rSquared;
 	generatedPoints = vector<vec3>();
-	for (int i = 0; i < numPoints; i++)
+	for (unsigned int i = 0; i < numPoints; i++)
 	{
-		float a = rand() % 10;
-		float b = rand() % 10;
-		float c = rand() % 10;
-		generatedPoints.push_back(impactLocation + vec3(a/10,b/10,c/10));
+		srand(i);
+		double ratio = (double)i/(double)numPoints;
+		float a = ratio*(rand() % 10 - 5.f)/10.f;
+		float b = ratio*(rand() % 10 - 5.f)/10.f;
+		float c = ratio*(rand() % 10 - 5.f)/10.f;
+		
+		vec3 point = impactLocation + rSquared*vec3(a,b,c);
+		Perlin *p = new Perlin(2,0.1,0.8,123);
+		float noise = 0.5 * p->Get(point[0]*point[0],point[1]*point[1],point[2]*point[2]);
+		point = vec3(point[0] + noise, point[1] + noise,point[2] + noise);
+		float inOrOut = (point[0] - impactLocation[0])*(point[0] - impactLocation[0]) 
+					  + (point[1] - impactLocation[1])*(point[1] - impactLocation[1])
+					  + (point[2] - impactLocation[2])*(point[2] - impactLocation[2]);
+		if (inOrOut <= rSquared) {
+			generatedPoints.push_back(point);
+		}
+		delete p;
 	}
 }
 
@@ -27,14 +42,19 @@ vector<vec3> impactPoints::points()
 void impactPoints::draw()
 {
 	if (generatedPoints.size() > 0){
+		glPushAttrib(GL_LIGHTING_BIT | GL_LINE_BIT);
+		glDisable(GL_LIGHTING);
+		glPointSize(2.f);
 		glBegin(GL_POINTS);
-		glColor3f(1.0,1.0,1.0);
+		
+		glColor3f(0.0,0.0,1.0);
 		for(int i = 0; i < generatedPoints.size(); i++) 
 		{
 			glVertex3f(generatedPoints.at(i)[0],generatedPoints.at(i)[1],generatedPoints.at(i)[2]);
 		}
 
 		glEnd();
+		glPopAttrib();
 	}
 }
 

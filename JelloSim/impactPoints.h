@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "vec.h"
+#include "perlin.h"
 
 class impactPoints {
 public:

@@ -1,4 +1,4 @@
-﻿Build started 4/16/2014 10:33:59 PM.
+﻿Build started 4/17/2014 12:50:07 AM.
      1>Project "C:\Users\James\Documents\GitHub\DynamicFracturing\tinyxml\tinyxmlSTL.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W4 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D TIXML_USE_STL /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug_STL/" /Fd".\Debug_STL/vc110.pdb" /FR".\Debug_STL\\" /Gd /TP /analyze- /errorReport:prompt tinystr.cpp tinyxml.cpp tinyxmlerror.cpp tinyxmlparser.cpp
@@ -21,4 +21,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.64
+Time Elapsed 00:00:02.20
