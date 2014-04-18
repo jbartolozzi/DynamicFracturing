@@ -236,13 +236,14 @@ World::~World()
     m_shapes.clear();
 }
 
-void World::Draw()
+void World::Draw(bool showGrid)
 {
 	static GLUquadricObj *quadObj = gluNewQuadric();
 
     float white[4] = {1.0,1.0,1.0,1.0};
     float grey[4] = {0.8,0.8,0.8,1.0};
     float black[4] = {0.0,0.0,0.0,1.0};
+	float red[4] = {1.0,0.0,0.0,1.0};
     glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, grey);
     glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, black);
     glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, black);
@@ -318,6 +319,24 @@ void World::Draw()
                 glVertex3f(-100, 0.0, 100);
                 glVertex3f(-100, 0.0, -100);
             glEnd();
+			if (showGrid) 
+			{
+				glPushAttrib(GL_LIGHTING_BIT | GL_LINE_BIT);
+				glDisable(GL_LIGHTING);
+				glBegin(GL_LINES);
+				glColor3f(1,1,1);
+				for (int i = 0; i <= 10; i++)
+				{
+					glVertex3f(i-5,0.01,0-5);
+					glVertex3f(i-5,0.01,10-5);
+
+					glVertex3f(0-5,0.01,i-5);
+					glVertex3f(10-5,0.01,i-5);
+				}
+				glEnd();
+				glPopAttrib();
+			}
+			
         }
     }
 }

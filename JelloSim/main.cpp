@@ -16,6 +16,7 @@ Camera theCamera;
 World theWorld("worlds/ground.xml");
 mmc::FpsTracker theFpsTracker;
 impactPoints ips;
+bool showGrid;
 
 // UI Helpers
 int lastX = 0, lastY = 0;
@@ -145,6 +146,7 @@ void onKeyboardCb(unsigned char key, int x, int y)
    else if (key == '4') mask = theJello.STRUCTURAL;
    else if (key == '5') mask = theJello.SHEAR;
    else if (key == '6') mask = theJello.BEND;
+   else if (key == 'g') showGrid = !showGrid;
 
    if (mask)
    {
@@ -212,18 +214,19 @@ void drawOverlay()
      glLoadIdentity();
      glRasterPos2f(0.01, 0.01);
      
-     char* intstr;
-     switch (theJello.GetIntegrationType())
+	 char* intstr = nullptr;
+	 //Write String to Screen
+     /*switch (theJello.GetIntegrationType())
      {
      case JelloMesh::EULER: intstr = "Euler"; break;
      case JelloMesh::MIDPOINT: intstr = "Midpoint"; break;
      case JelloMesh::RK4: intstr = "RK4"; break;
-     }
+     }*/
 
      char info[1024];
-     sprintf(info, "Framerate: %3.1f %s %s", 
+     sprintf(info, "Framerate: %3.1f %s", 
          theFpsTracker.fpsAverage(),
-         intstr, isRecording? "(Recording ON)" : "");
+         isRecording? "(Recording ON)" : "");
  
      for (unsigned int i = 0; i < strlen(info); i++)
      {
@@ -263,13 +266,13 @@ void onDrawCb()
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     theCamera.draw();
-    drawAxes();
+    //drawAxes();
 
     vec3 cpos = theCamera.getPosition();
     float pos[4] = {cpos[0], cpos[1]+2.0, cpos[2],0.0};
     glLightfv(GL_LIGHT0, GL_POSITION, pos);
 
-    //theWorld.Draw();
+	theWorld.Draw(showGrid);
 	ips.draw();
     //theJello.Draw(cpos);
     drawOverlay();
@@ -402,6 +405,7 @@ int loadJelloParameters(char* filename) throw (char*)
 void init(void)
 {
     initCamera();
+	showGrid = false;
 	ips = impactPoints(vec3(0,1,0),vec3(1,1,1),1000);
     glClearColor(0.8, 0.8, 0.8, 1.0);
 
@@ -424,14 +428,14 @@ void init(void)
     glLightfv(GL_LIGHT0, GL_SPECULAR, white);
     glLightfv(GL_LIGHT0, GL_AMBIENT, black);
 
-    GLfloat fogColor[4]= {0.8f, 0.8f, 0.8f, 1.0f};	
+    GLfloat fogColor[4]= {0.f, 0.f, 0.f, 0.7f};	
     glFogi(GL_FOG_MODE, GL_LINEAR);		// Fog Mode
     glFogfv(GL_FOG_COLOR, fogColor);			// Set Fog Color
     glFogf(GL_FOG_DENSITY, 0.35f);				// How Dense Will The Fog Be
     glHint(GL_FOG_HINT, GL_DONT_CARE);			// Fog Hint Value
     glFogf(GL_FOG_START, 10.0f);				// Fog Start Depth
     glFogf(GL_FOG_END, 40.0f);				// Fog End Depth
-    glEnable(GL_FOG);					// Enables GL_FOG
+    //glEnable(GL_FOG);					// Enables GL_FOG
 }
 
 int main(int argc, char **argv)
@@ -452,7 +456,7 @@ int main(int argc, char **argv)
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
     glutInitWindowSize(800, 600);
     glutInitWindowPosition(100, 100);
-    glutCreateWindow("JelloSim by Scooby Doo");
+    glutCreateWindow("Dynamic Fracturing");
     glutDisplayFunc(onDrawCb);
     glutKeyboardFunc(onKeyboardCb);
     glutSpecialFunc(onKeyboardSpecialCb);
@@ -460,7 +464,7 @@ int main(int argc, char **argv)
     glutMotionFunc(onMouseMotionCb); 
     glutTimerFunc(100, onTimerCb, 0);
     glutReshapeFunc(onResizeCb);
-
+	/*
     int intMenu = glutCreateMenu(onMenuCb);
     glutAddMenuEntry("Euler\t'8'", '8');
     glutAddMenuEntry("Midpoint\t'9'", '9');
@@ -472,16 +476,16 @@ int main(int argc, char **argv)
     glutAddMenuEntry("Collision Normals\t'3'", '3');
     glutAddMenuEntry("Structural Springs\t'4'", '4');
     glutAddMenuEntry("Shear Springs\t'5'", '5');
-    glutAddMenuEntry("Bend Springs\t'6'", '6');
+    glutAddMenuEntry("Bend Springs\t'6'", '6');*/
 
     theMenu = glutCreateMenu(onMenuCb);
     glutAddMenuEntry("Start\t'>'", '>');
     glutAddMenuEntry("Pause\t'='", '=');
     glutAddMenuEntry("Reset\t'<'", '<');
     glutAddMenuEntry("Record\t'r'", 'r');
-    glutAddSubMenu("Integration Type", intMenu);
-    glutAddSubMenu("Draw Settings", displayMenu);
-    glutAddMenuEntry("_________________", -1);
+	glutAddMenuEntry("Show Grid\t'g'",'g');
+    //glutAddSubMenu("Integration Type", intMenu);
+    //glutAddSubMenu("Draw Settings", displayMenu);
     glutAddMenuEntry("Exit", 27);
     glutAttachMenu(GLUT_RIGHT_BUTTON);
 
