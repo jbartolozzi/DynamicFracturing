@@ -73,6 +73,7 @@
     <ClInclude Include="clock.h" />
     <ClInclude Include="face.h" />
     <ClInclude Include="fps.h" />
+    <ClInclude Include="fractureMesh.h" />
     <ClInclude Include="impactPoints.h" />
     <ClInclude Include="jelloMesh.h" />
     <ClInclude Include="matrix.h" />
@@ -84,6 +85,7 @@
   <ItemGroup>
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="fps.cpp" />
+    <ClCompile Include="fractureMesh.cpp" />
     <ClCompile Include="impactPoints.cpp" />
     <ClCompile Include="jelloMesh.cpp" />
     <ClCompile Include="main.cpp" />

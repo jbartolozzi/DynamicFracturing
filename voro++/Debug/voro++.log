@@ -1,5 +1,15 @@
-﻿Build started 4/18/2014 1:14:10 AM.
+﻿Build started 4/18/2014 6:56:56 PM.
+     1>Project "C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\voro++\voro++.vcxproj" on node 3 (Build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\voro++.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /D _MBCS /D _CRT_SECURE_NO_WARNINGS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt v_base_wl.cc
+         v_base_wl.cc
+     1>c:\users\emre tanirgan\desktop\upenn\cis 563\dynamicfracturing\voro++\v_base_wl.cc(13): error C2653: 'voro_base' : is not a class or namespace name
+     1>c:\users\emre tanirgan\desktop\upenn\cis 563\dynamicfracturing\voro++\v_base_wl.cc(13): error C2065: 'wl_seq_length' : undeclared identifier
+     1>c:\users\emre tanirgan\desktop\upenn\cis 563\dynamicfracturing\voro++\v_base_wl.cc(13): error C2065: 'wl_hgridcu' : undeclared identifier
+     1>Done Building Project "C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\voro++\voro++.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:00.01
+Time Elapsed 00:00:00.39

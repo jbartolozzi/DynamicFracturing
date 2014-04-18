@@ -48,6 +48,9 @@
     <ClInclude Include="face.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="fractureMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="camera.cpp">
@@ -72,6 +75,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="perlin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fractureMesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

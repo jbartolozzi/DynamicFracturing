@@ -10,8 +10,11 @@
 #include "impactPoints.h"
 #include "jelloMesh.h"
 #include "world.h"
+#include "fractureMesh.h"
 
 JelloMesh theJello;
+fractureMesh fracMesh;
+
 Camera theCamera;
 World theWorld("worlds/ground.xml");
 mmc::FpsTracker theFpsTracker;
@@ -328,6 +331,7 @@ void onDrawCb()
 	ips.draw();
 	//ips2.draw();
     //theJello.Draw(cpos);
+	fracMesh.Draw(cpos);
     drawOverlay();
     glutSwapBuffers();
 }
