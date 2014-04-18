@@ -16,8 +16,8 @@ vec3  Camera::dfltUp(0.0, 1.0, 0.0);
 vec3  Camera::dfltLook(0.0, 0.0, 0.0);
 float Camera::dfltVfov = 60.0;
 float Camera::dfltAspect = 1.0;
-float Camera::dfltNear = 0.5;
-float Camera::dfltFar = 50.0;
+float Camera::dfltNear = 0.01;
+float Camera::dfltFar = 500.0;
 float Camera::dfltSpeed = 0.1;
 float Camera::dfltTurnRate = 1.0*(M_PI/180.0);
 
@@ -308,4 +308,9 @@ math::matrix<double> Camera::cameraToWorldMatrix()
    tmp.Set(4, 4, myModelMatrix);
    tmp = tmp.Inv();
    return tmp;
+}
+
+const vec3& Camera::getView() const
+{
+	return v;
 }

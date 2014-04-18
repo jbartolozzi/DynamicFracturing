@@ -236,7 +236,7 @@ World::~World()
     m_shapes.clear();
 }
 
-void World::Draw(bool showGrid)
+void World::Draw()
 {
 	static GLUquadricObj *quadObj = gluNewQuadric();
 
@@ -319,24 +319,6 @@ void World::Draw(bool showGrid)
                 glVertex3f(-100, 0.0, 100);
                 glVertex3f(-100, 0.0, -100);
             glEnd();
-			if (showGrid) 
-			{
-				glPushAttrib(GL_LIGHTING_BIT | GL_LINE_BIT);
-				glDisable(GL_LIGHTING);
-				glBegin(GL_LINES);
-				glColor3f(1,1,1);
-				for (int i = 0; i <= 10; i++)
-				{
-					glVertex3f(i-5,0.01,0-5);
-					glVertex3f(i-5,0.01,10-5);
-
-					glVertex3f(0-5,0.01,i-5);
-					glVertex3f(10-5,0.01,i-5);
-				}
-				glEnd();
-				glPopAttrib();
-			}
-			
         }
     }
 }

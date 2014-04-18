@@ -12,7 +12,7 @@ public:
     virtual ~World();
 
     void LoadFromFile(const std::string& filename);
-    virtual void Draw(bool showGrid);
+    virtual void Draw();
 
 public:
     enum ShapeType {SPHERE, GROUND, CUBE, CYLINDER};

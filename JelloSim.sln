@@ -1,12 +1,14 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JelloSim", "JelloSim\JelloSim.vcxproj", "{4668E015-38F7-4334-9F1F-1F4115050041}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DynamicFracture", "JelloSim\JelloSim.vcxproj", "{4668E015-38F7-4334-9F1F-1F4115050041}"
 	ProjectSection(ProjectDependencies) = postProject
 		{A3A84737-5017-4577-B8A2-79429A25B8B6} = {A3A84737-5017-4577-B8A2-79429A25B8B6}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tinyxmlSTL", "tinyxml\tinyxmlSTL.vcxproj", "{A3A84737-5017-4577-B8A2-79429A25B8B6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "voro++", "voro++\voro++.vcxproj", "{E4C29FD4-A970-4B56-8BC8-4D5A1E0C756B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,6 +24,10 @@ Global
 		{A3A84737-5017-4577-B8A2-79429A25B8B6}.Debug|Win32.Build.0 = Debug|Win32
 		{A3A84737-5017-4577-B8A2-79429A25B8B6}.Release|Win32.ActiveCfg = Release|Win32
 		{A3A84737-5017-4577-B8A2-79429A25B8B6}.Release|Win32.Build.0 = Release|Win32
+		{E4C29FD4-A970-4B56-8BC8-4D5A1E0C756B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E4C29FD4-A970-4B56-8BC8-4D5A1E0C756B}.Debug|Win32.Build.0 = Debug|Win32
+		{E4C29FD4-A970-4B56-8BC8-4D5A1E0C756B}.Release|Win32.ActiveCfg = Release|Win32
+		{E4C29FD4-A970-4B56-8BC8-4D5A1E0C756B}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

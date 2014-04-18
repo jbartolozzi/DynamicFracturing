@@ -15,8 +15,12 @@ JelloMesh theJello;
 Camera theCamera;
 World theWorld("worlds/ground.xml");
 mmc::FpsTracker theFpsTracker;
-impactPoints ips;
+impactPoints ips,ips2;
 bool showGrid;
+float perlinOffset;
+
+// ray vectors for intersection purposes
+vec3 rayA,rayB;
 
 // UI Helpers
 int lastX = 0, lastY = 0;
@@ -126,6 +130,11 @@ void onMouseCb(int button, int state, int x, int y)
    glutSetMenu(theMenu);
 }
 
+void setRayVectors(int x, int y)
+{
+	rayA = theCamera.getPosition();
+	theCamera.screenToWorld(10,10,rayB);
+}
 
 void onKeyboardCb(unsigned char key, int x, int y)
 {
@@ -147,6 +156,7 @@ void onKeyboardCb(unsigned char key, int x, int y)
    else if (key == '5') mask = theJello.SHEAR;
    else if (key == '6') mask = theJello.BEND;
    else if (key == 'g') showGrid = !showGrid;
+   else if (key == 'p') setRayVectors(10,10);
 
    if (mask)
    {
@@ -257,6 +267,37 @@ void drawAxes()
   glPopAttrib();
 }
 
+void drawGrid()
+{
+	if (showGrid) 
+	{
+		glPushAttrib(GL_LIGHTING_BIT | GL_LINE_BIT);
+		glDisable(GL_LIGHTING);
+		glBegin(GL_LINES);
+		glColor3f(1,1,1);
+		for (int i = 0; i <= 10; i++)
+		{
+			glVertex3f(i-5,0.01,0-5);
+			glVertex3f(i-5,0.01,10-5);
+
+			glVertex3f(0-5,0.01,i-5);
+			glVertex3f(10-5,0.01,i-5);
+		}
+		glEnd();
+		glPopAttrib();
+	}
+}
+void drawRay()
+{
+	glPushAttrib(GL_LIGHTING_BIT | GL_LINE_BIT);
+	glDisable(GL_LIGHTING);
+	glBegin(GL_LINES);
+	glColor3f(1,0,0);
+	glVertex3f(rayA[0],rayA[1],rayA[2]);
+	glVertex3f(rayB[0],rayB[1],rayB[2]);
+	glEnd();
+	glPopAttrib();
+}
 void onDrawCb()
 {
     // Keep track of time
@@ -266,14 +307,17 @@ void onDrawCb()
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     theCamera.draw();
-    //drawAxes();
+	drawGrid();
+	drawRay();
+	//drawAxes();
 
     vec3 cpos = theCamera.getPosition();
     float pos[4] = {cpos[0], cpos[1]+2.0, cpos[2],0.0};
     glLightfv(GL_LIGHT0, GL_POSITION, pos);
 
-	theWorld.Draw(showGrid);
+	theWorld.Draw();
 	ips.draw();
+	//ips2.draw();
     //theJello.Draw(cpos);
     drawOverlay();
     glutSwapBuffers();
@@ -404,10 +448,14 @@ int loadJelloParameters(char* filename) throw (char*)
 
 void init(void)
 {
+	perlinOffset = 0.f;
     initCamera();
+	rayA = vec3(0,0,0);
+	rayB = vec3(0,1,0);
 	showGrid = false;
-	ips = impactPoints(vec3(0,1,0),vec3(1,1,1),1000);
-    glClearColor(0.8, 0.8, 0.8, 1.0);
+	ips = impactPoints(vec3(0,0,0),vec3(10,10,10),100000);
+	ips2 = impactPoints(vec3(1,1,0),vec3(1,1,1),1000);
+    glClearColor(0.2, 0.2, 0.2, 1.0);
 
     glEnable(GL_BLEND);
     glEnable(GL_ALPHA_TEST);
@@ -428,7 +476,7 @@ void init(void)
     glLightfv(GL_LIGHT0, GL_SPECULAR, white);
     glLightfv(GL_LIGHT0, GL_AMBIENT, black);
 
-    GLfloat fogColor[4]= {0.f, 0.f, 0.f, 0.7f};	
+    GLfloat fogColor[4]= {0.f, 0.f, 0.f, 1.f};	
     glFogi(GL_FOG_MODE, GL_LINEAR);		// Fog Mode
     glFogfv(GL_FOG_COLOR, fogColor);			// Set Fog Color
     glFogf(GL_FOG_DENSITY, 0.35f);				// How Dense Will The Fog Be
@@ -484,6 +532,7 @@ int main(int argc, char **argv)
     glutAddMenuEntry("Reset\t'<'", '<');
     glutAddMenuEntry("Record\t'r'", 'r');
 	glutAddMenuEntry("Show Grid\t'g'",'g');
+	glutAddMenuEntry("Fire Camera Ray\t'r'",'r');
     //glutAddSubMenu("Integration Type", intMenu);
     //glutAddSubMenu("Draw Settings", displayMenu);
     glutAddMenuEntry("Exit", 27);

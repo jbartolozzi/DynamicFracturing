@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="c_loops.hh">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="cell.hh">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="common.hh">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="config.hh">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="container.hh">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="container_prd.hh">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="pre_container.hh">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="rad_option.hh">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="unitcell.hh">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="v_base.hh">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="v_compute.hh">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="voro++.hh">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="wall.hh">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="worklist.hh">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="Makefile.dep">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Doxyfile">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="c_loops.o">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="cell.o">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="common.o">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="container.o">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="container_prd.o">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="pre_container.o">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="unitcell.o">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="v_base.o">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="v_compute.o">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="wall.o">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="c_loops.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cell.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cmd_line.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="container.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="container_prd.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pre_container.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitcell.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="v_base.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="v_base_wl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="v_compute.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="voro++.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wall.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
