@@ -71,6 +71,7 @@
   <ItemGroup>
     <ClInclude Include="camera.h" />
     <ClInclude Include="clock.h" />
+    <ClInclude Include="face.h" />
     <ClInclude Include="fps.h" />
     <ClInclude Include="impactPoints.h" />
     <ClInclude Include="jelloMesh.h" />

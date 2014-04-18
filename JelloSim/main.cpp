@@ -21,6 +21,7 @@ float perlinOffset;
 
 // ray vectors for intersection purposes
 vec3 rayA,rayB;
+int screenWidth,screenHeight;
 
 // UI Helpers
 int lastX = 0, lastY = 0;
@@ -121,8 +122,19 @@ void onMouseMotionCb(int x, int y)
    glutPostRedisplay();
 }
 
+void setRayVectors(int x, int y)
+{
+	rayA = theCamera.getPosition();
+	vec3 temp = vec3(0,0,0);
+	theCamera.screenToWorld(x, screenHeight - y,temp);
+	temp = (temp-rayA).Normalize();
+	rayB = rayA + 10*temp;
+	ips = impactPoints(rayB,vec3(1,1,1),100);
+}
+
 void onMouseCb(int button, int state, int x, int y)
 {
+	if (button == GLUT_RIGHT_BUTTON) setRayVectors(x,y);
    theButtonState = button;
    theModifierState = glutGetModifiers();
    lastX = x;
@@ -130,11 +142,7 @@ void onMouseCb(int button, int state, int x, int y)
    glutSetMenu(theMenu);
 }
 
-void setRayVectors(int x, int y)
-{
-	rayA = theCamera.getPosition();
-	theCamera.screenToWorld(10,10,rayB);
-}
+
 
 void onKeyboardCb(unsigned char key, int x, int y)
 {
@@ -156,7 +164,6 @@ void onKeyboardCb(unsigned char key, int x, int y)
    else if (key == '5') mask = theJello.SHEAR;
    else if (key == '6') mask = theJello.BEND;
    else if (key == 'g') showGrid = !showGrid;
-   else if (key == 'p') setRayVectors(10,10);
 
    if (mask)
    {
@@ -200,6 +207,8 @@ void onTimerCb(int value)
 
 void onResizeCb(int width, int height)
 {
+	screenWidth = width;
+	screenHeight = height;
    // Update viewport
    glViewport(0, 0, width, height);
 
@@ -309,7 +318,7 @@ void onDrawCb()
     theCamera.draw();
 	drawGrid();
 	drawRay();
-	//drawAxes();
+	drawAxes();
 
     vec3 cpos = theCamera.getPosition();
     float pos[4] = {cpos[0], cpos[1]+2.0, cpos[2],0.0};
@@ -448,13 +457,14 @@ int loadJelloParameters(char* filename) throw (char*)
 
 void init(void)
 {
+	screenWidth = 640;
+	screenHeight = 480;
 	perlinOffset = 0.f;
     initCamera();
+
 	rayA = vec3(0,0,0);
 	rayB = vec3(0,1,0);
-	showGrid = false;
-	ips = impactPoints(vec3(0,0,0),vec3(10,10,10),100000);
-	ips2 = impactPoints(vec3(1,1,0),vec3(1,1,1),1000);
+	showGrid = true;
     glClearColor(0.2, 0.2, 0.2, 1.0);
 
     glEnable(GL_BLEND);
@@ -536,7 +546,7 @@ int main(int argc, char **argv)
     //glutAddSubMenu("Integration Type", intMenu);
     //glutAddSubMenu("Draw Settings", displayMenu);
     glutAddMenuEntry("Exit", 27);
-    glutAttachMenu(GLUT_RIGHT_BUTTON);
+    //glutAttachMenu(GLUT_RIGHT_BUTTON);
 
 	init();
 	if (loadJelloParameters(argv[1]) != 0)

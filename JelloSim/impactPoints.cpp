@@ -8,7 +8,7 @@ impactPoints::impactPoints()
 
 impactPoints::impactPoints(vec3 impactLocation, vec3 force, int numPoints)
 {
-	Perlin *p = new Perlin(3,5,2,123);
+	Perlin *p = new Perlin(2,0.1,1,123);
 	float rSquared = force.Length();
 	rSquared *= rSquared;
 	generatedPoints = vector<vec3>();
@@ -16,13 +16,14 @@ impactPoints::impactPoints(vec3 impactLocation, vec3 force, int numPoints)
 	{
 		srand(i);
 		double ratio = (double)i/(double)numPoints;
+		ratio = ratio*ratio;
 		float a = ratio*(rand() % 10 - 5.f)/10.f;
 		float b = ratio*(rand() % 10 - 5.f)/10.f;
 		float c = ratio*(rand() % 10 - 5.f)/10.f;
 		
 		vec3 point = impactLocation + rSquared*vec3(a,b,c);
 		
-		float noise = 0.5 * p->Get(point[0],point[1],point[2]);
+		float noise = p->Get(point[0]*point[0],point[1]*point[1],point[2]*point[2]);
 		point = vec3(point[0] + noise, point[1] + noise,point[2] + noise);
 		float inOrOut = (point[0] - impactLocation[0])*(point[0] - impactLocation[0]) 
 					  + (point[1] - impactLocation[1])*(point[1] - impactLocation[1])
@@ -62,7 +63,7 @@ void impactPoints::draw()
 	if (generatedPoints.size() > 0){
 		glPushAttrib(GL_LIGHTING_BIT | GL_LINE_BIT);
 		glDisable(GL_LIGHTING);
-		glPointSize(1.2);
+		glPointSize(2);
 		glBegin(GL_POINTS);
 		
 		glColor3f(1.0,1.0,1.0);

@@ -282,7 +282,7 @@ void Camera::turnDown(int scale) // rotate around v
 bool Camera::screenToWorld(int screenX, int screenY, vec3& worldCoords)
 {
    double x, y, z;
-   GLint result = gluUnProject(screenX, screenY, 0.0, 
+   GLint result = gluUnProject(screenX, screenY, 0.1, 
                                myModelMatrix, myProjMatrix, myViewport, 
                                &x, &y, &z);
 
@@ -308,9 +308,4 @@ math::matrix<double> Camera::cameraToWorldMatrix()
    tmp.Set(4, 4, myModelMatrix);
    tmp = tmp.Inv();
    return tmp;
-}
-
-const vec3& Camera::getView() const
-{
-	return v;
 }

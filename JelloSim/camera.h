@@ -32,7 +32,6 @@ public:
    virtual vec3 getRelativePosition(float left, float up, float forward);
    virtual float heading() const;
    virtual float pitch() const;
-   virtual const vec3& getView() const;
 
    // Camera frustrum managements
    virtual void setProjection(

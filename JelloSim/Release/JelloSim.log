@@ -1,7 +1,14 @@
-﻿Build started 4/18/2014 4:45:52 PM.
+﻿Build started 4/18/2014 5:00:36 PM.
      1>Project "C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\JelloSim.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\DevIL1.6.7\include /I..\tinyxml /I..\glut /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\DevIL1.6.7\include /I..\tinyxml /I..\glut /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt impactPoints.cpp main.cpp
+         impactPoints.cpp
+     1>impactPoints.cpp(15): warning C4018: '<' : signed/unsigned mismatch
+     1>impactPoints.cpp(45): warning C4101: 'y' : unreferenced local variable
+     1>impactPoints.cpp(45): warning C4101: 'x' : unreferenced local variable
+     1>impactPoints.cpp(44): warning C4101: 'i' : unreferenced local variable
+     1>impactPoints.cpp(45): warning C4101: 'z' : unreferenced local variable
+     1>impactPoints.cpp(69): warning C4018: '<' : signed/unsigned mismatch
          main.cpp
      1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(234): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
                  c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(314) : see reference to class template instantiation 'math::matrix<T>' being compiled
@@ -37,12 +44,12 @@
      1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(987): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
      1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(1153): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
      1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(1161): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>main.cpp(239): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>main.cpp(243): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : see declaration of 'sprintf'
-     1>main.cpp(327): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>main.cpp(337): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>main.cpp(331): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>main.cpp(341): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(200) : see declaration of 'strtok'
-     1>main.cpp(338): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>main.cpp(342): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(200) : see declaration of 'strtok'
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\James\Documents\GitHub\DynamicFracturing\Release\DynamicFracture.exe" /NOLOGO /LIBPATH:..\DevIL1.6.7\lib /LIBPATH:..\tinyxml /LIBPATH:..\glut DevIL.lib ilu.lib ilut.lib glut32.lib tinyxml_STL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\James\Documents\GitHub\DynamicFracturing\Release\DynamicFracture.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\James\Documents\GitHub\DynamicFracturing\Release\DynamicFracture.lib" /MACHINE:X86 /SAFESEH Release\camera.obj
@@ -60,4 +67,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.71
+Time Elapsed 00:00:03.08
