@@ -26,5 +26,8 @@ public:
 	std::vector<edge> edges;
 	std::vector<vertex*> vertices;
 
+	//Returns t value for intersection with a given ray
+	float intersect(vec3 p0, vec3 v0);
+
 };
 

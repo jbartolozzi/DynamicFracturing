@@ -24,6 +24,7 @@ float perlinOffset;
 
 // ray vectors for intersection purposes
 vec3 rayA,rayB;
+vec3 intPoint;
 int screenWidth,screenHeight;
 
 // UI Helpers
@@ -132,7 +133,15 @@ void setRayVectors(int x, int y)
 	theCamera.screenToWorld(x, screenHeight - y,temp);
 	temp = (temp-rayA).Normalize();
 	rayB = rayA + 10*temp;
-	ips = impactPoints(rayB,vec3(1,1,1),100);
+	
+	//get point of intersection
+	//if there is no intersection, we keep the old point for now
+	float t = fracMesh.intersect(rayA, temp);
+	if(t != -1){
+		intPoint = rayA + temp*t;
+	} 
+	
+	ips = impactPoints(intPoint,vec3(1,1,1),100);
 }
 
 void onMouseCb(int button, int state, int x, int y)

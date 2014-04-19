@@ -95,3 +95,76 @@ void fractureMesh::setUpMesh()
 	edges.push_back(e11);
 	edges.push_back(e12);
 }
+
+float fractureMesh::intersect(vec3 p0, vec3 v0)
+{
+
+	//vec3 min = vec3(-0.5, -0.5, -0.5);
+	//vec3 max = vec3(0.5, 0.5, 0.5);
+	vec3 min = vec3(0, 0, -1);
+	vec3 max = vec3(1, 1, 0);
+
+	float tmin = (min[0] - p0[0]) / v0[0];
+    float tmax = (max[0] - p0[0]) / v0[0];
+    if (tmin > tmax) {
+		float temp = tmin;
+		tmin = tmax;
+		tmax = temp;
+	}
+    float tymin = (min[1] - p0[1]) / v0[1];
+    float tymax = (max[1] - p0[1]) / v0[1];
+    if (tymin > tymax) {
+		float temp = tymin;
+		tymin = tymax;
+		tymax = temp;
+	}
+    if ((tmin > tymax) || (tymin > tmax)){
+        return -1;
+	}
+    if (tymin > tmin){
+        tmin = tymin;
+	}
+    if (tymax < tmax){
+        tmax = tymax;
+	}
+    float tzmin = (min[2] - p0[2]) / v0[2];
+    float tzmax = (max[2] - p0[2]) / v0[2];
+    if (tzmin > tzmax) {
+		float temp = tzmin;
+		tzmin = tzmax;
+		tzmax = temp;
+	}
+    if ((tmin > tzmax) || (tzmin > tmax)){
+        return -1;
+	}
+    if (tzmin > tmin){
+        tmin = tzmin;
+	}
+    if (tzmax < tmax){
+        tmax = tzmax;
+	}
+
+	//Enable this part to set intersection normal -- not sure if it'd be useful later
+	/*
+	vec3 intPoint = p0 + tmin*v0;
+	if(intPoint[1] <= 1.01 && intPoint[1] >= 0.99){
+		intNormal = vec3(0,1,0);
+	}
+	else if(intPoint[1] >= -1.01 && intPoint[1] <= -0.99){
+		intNormal = vec3(0,-1,0);
+	}
+	else if(intPoint[0] <= 1.01 && intPoint[0] >= 0.99){
+		intNormal = vec3(1,0,0);
+	}
+	else if(intPoint[0] >= -1.01 && intPoint[0] <= -0.99){
+		intNormal = vec3(-1,0,0);
+	}
+	else if(intPoint[2] <= 1.01 && intPoint[2] >= 0.99){
+		intNormal = vec3(0,0,1);
+	}
+	else if(intPoint[2] >= -1.01 && intPoint[2] <= -0.99){
+		intNormal = vec3(0,0,-1);
+	}*/
+
+	return tmin;
+}

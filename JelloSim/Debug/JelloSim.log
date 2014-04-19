@@ -1,9 +1,9 @@
-﻿Build started 4/18/2014 7:09:17 PM.
+﻿Build started 4/19/2014 12:18:03 AM.
      1>Project "C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\JelloSim.vcxproj" on node 2 (Build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\DynamicFracture.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\DevIL1.6.7\include /I..\tinyxml /I..\glut /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt fractureMesh.cpp main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\DevIL1.6.7\include /I..\tinyxml /I..\glut /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
      1>c:\users\emre tanirgan\desktop\upenn\cis 563\dynamicfracturing\jellosim\matrix.h(234): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
                  c:\users\emre tanirgan\desktop\upenn\cis 563\dynamicfracturing\jellosim\matrix.h(314) : see reference to class template instantiation 'math::matrix<T>' being compiled
@@ -39,16 +39,13 @@
      1>c:\users\emre tanirgan\desktop\upenn\cis 563\dynamicfracturing\jellosim\matrix.h(987): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
      1>c:\users\emre tanirgan\desktop\upenn\cis 563\dynamicfracturing\jellosim\matrix.h(1153): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
      1>c:\users\emre tanirgan\desktop\upenn\cis 563\dynamicfracturing\jellosim\matrix.h(1161): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\emre tanirgan\desktop\upenn\cis 563\dynamicfracturing\jellosim\main.cpp(251): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\emre tanirgan\desktop\upenn\cis 563\dynamicfracturing\jellosim\main.cpp(262): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
-     1>c:\users\emre tanirgan\desktop\upenn\cis 563\dynamicfracturing\jellosim\main.cpp(340): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\emre tanirgan\desktop\upenn\cis 563\dynamicfracturing\jellosim\main.cpp(350): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\emre tanirgan\desktop\upenn\cis 563\dynamicfracturing\jellosim\main.cpp(351): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\emre tanirgan\desktop\upenn\cis 563\dynamicfracturing\jellosim\main.cpp(361): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
-     1>c:\users\emre tanirgan\desktop\upenn\cis 563\dynamicfracturing\jellosim\main.cpp(351): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\emre tanirgan\desktop\upenn\cis 563\dynamicfracturing\jellosim\main.cpp(362): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
-         fractureMesh.cpp
-     1>c:\users\emre tanirgan\desktop\upenn\cis 563\dynamicfracturing\jellosim\fracturemesh.cpp(20): warning C4018: '<' : signed/unsigned mismatch
-         Generating Code...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\Debug\DynamicFracture.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\DevIL1.6.7\lib /LIBPATH:..\tinyxml /LIBPATH:..\glut DevIL.lib ilu.lib ilut.lib glut32.lib tinyxmld_STL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\Debug\DynamicFracture.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\Debug\DynamicFracture.lib" /MACHINE:X86 Debug\camera.obj
          Debug\fps.obj
@@ -67,4 +64,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:08.31
+Time Elapsed 00:00:05.03
