@@ -141,7 +141,7 @@ void setRayVectors(int x, int y)
 		intPoint = rayA + temp*t;
 	} 
 	
-	ips = impactPoints(intPoint,vec3(1,1,1),5);
+	ips = impactPoints(intPoint,vec3(1,1,1),10);
 }
 
 void onMouseCb(int button, int state, int x, int y)
@@ -471,14 +471,14 @@ int loadJelloParameters(char* filename) throw (char*)
 
 void init(void)
 {
-	screenWidth = 640;
+	screenWidth = 720;
 	screenHeight = 480;
 	perlinOffset = 0.f;
     initCamera();
 
 	rayA = vec3(0,0,0);
 	rayB = vec3(0,1,0);
-	showGrid = true;
+	showGrid = false;
     glClearColor(0.2, 0.2, 0.2, 1.0);
 
     glEnable(GL_BLEND);

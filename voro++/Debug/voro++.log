@@ -1,18 +1,14 @@
-﻿Build started 4/21/2014 6:18:53 PM.
+﻿Build started 4/21/2014 7:32:58 PM.
      1>Project "C:\Users\James\Documents\GitHub\DynamicFracturing\voro++\voro++.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /D _CRT_SECURE_NO_WARNINGS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt cmd_line.cc container.cc pre_container.cc v_compute.cc wall.cc
-         cmd_line.cc
-     1>c:\users\james\documents\github\dynamicfracturing\voro++\container.hh(337): warning C4101: 'pp' : unreferenced local variable
-         Generating Code...
-         Compiling...
-         container.cc
-     1>c:\users\james\documents\github\dynamicfracturing\voro++\container.hh(337): warning C4101: 'pp' : unreferenced local variable
-         Generating Code...
-         Skipping... (no relevant changes detected)
-         wall.cc
-         v_compute.cc
-         pre_container.cc
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /D _CRT_SECURE_NO_WARNINGS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt cell.cc
+         cell.cc
+     1>c:\users\james\documents\github\dynamicfracturing\voro++\cell.cc(513): warning C4101: 'except' : unreferenced local variable
+                 c:\users\james\documents\github\dynamicfracturing\voro++\cell.hh(320) : see reference to function template instantiation 'bool voro::voronoicell_base::nplane<voro::voronoicell>(vc_class &,double,double,double,double,int)' being compiled
+                 with
+                 [
+                     vc_class=voro::voronoicell
+                 ]
        Lib:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"C:\Users\James\Documents\GitHub\DynamicFracturing\Debug\voro++.lib" /NOLOGO Debug\cell.obj
          Debug\cmd_line.obj
@@ -196,4 +192,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.50
+Time Elapsed 00:00:00.86

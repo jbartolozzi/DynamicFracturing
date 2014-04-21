@@ -1523,6 +1523,8 @@ void voronoicell_base::draw_gnuplot(double x,double y,double z,FILE *fp) {
 	reset_edges();
 }
 
+// This method copies the functionality of draw_gnuplot but returns a vector of the vertices
+// for each face
 std::vector<vec3> voronoicell_base::vectorfrom_gnuplot(double x,double y,double z) {
 	std::vector<vec3> output;
 	int i,j,k,l,m;

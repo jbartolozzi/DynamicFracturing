@@ -39,10 +39,12 @@ impactPoints::impactPoints(vec3 impactLocation, vec3 force, int numPoints)
 	// eight particles within each computational block
 	//voro::container con = voro::container(x_min,x_max,y_min,y_max,z_min,z_max,n_x,n_y,n_z,
 		//	false,false,false,8);
-	const double x_min=-r,x_max=r;
-	const double y_min=-r,y_max=r;
-	const double z_min=-r,z_max=r;
-	const int n_x=numPoints,n_y=numPoints,n_z=numPoints;
+	//SET THE VALUES OF THE CONTAINER BASED ON THE IMPACT LOCATION
+	//
+	const double x_min=-1,x_max=1;
+	const double y_min=-1,y_max=1;
+	const double z_min=-1,z_max=1;
+	const int n_x=3,n_y=3,n_z=3;
 	const double cvol=(x_max-x_min)*(y_max-y_min)*(x_max-x_min);
 	voro::container con(x_min,x_max,y_min,y_max,z_min,z_max,n_x,n_y,n_z,
 			false,false,false,8);
@@ -53,13 +55,25 @@ impactPoints::impactPoints(vec3 impactLocation, vec3 force, int numPoints)
 		double z = generatedPoints[i][2];
 		con.put(i,a,b,z);
 	}
-	con.sum_cell_volumes();
-	voroPoints = con.output_voronoi_vertices(r/10,impactLocation,generatedPoints);
+	voroPoints = con.output_voronoi_vertices(r/3,impactLocation,generatedPoints);
+	//cullVoroPoints(impactLocation, rSquared);
 }
 
-void impactPoints::cullVoroPoints()
+void impactPoints::cullVoroPoints(vec3 impactLocation, float rSquared)
 {
-	
+	for(int i = 0; i < voroPoints.size(); i++) 
+	{
+		for(int j = 0; j < voroPoints[i].size(); j++)
+		{
+			float x = voroPoints[i][j][0];
+			float y = voroPoints[i][j][1];
+			float z = voroPoints[i][j][2];
+			float newX = x * sqrt(1-(y*y)/2 - (z*z)/2 + (y*y*z*z)/3);
+			float newY = y * sqrt(1-(z*z)/2 - (x*x)/2 + (z*z*x*x)/3);
+			float newZ = z * sqrt(1-(x*x)/2 - (y*y)/2 + (x*x*y*y)/3);
+			voroPoints[i][j] -= vec3(newX,newY,newZ);
+		}
+	}
 }
 
 vector<vec3> impactPoints::points() 
