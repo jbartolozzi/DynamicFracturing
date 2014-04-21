@@ -4,6 +4,7 @@
 #include <vector>
 #include "vec.h"
 #include "perlin.h"
+#include "voro++.hh"
 
 class impactPoints {
 public:

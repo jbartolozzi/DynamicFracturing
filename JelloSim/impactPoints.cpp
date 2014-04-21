@@ -50,6 +50,7 @@ impactPoints::impactPoints(vec3 impactLocation, vec3 force, int numPoints)
 	// eight particles within each computational block
 	//voro::container con = voro::container(x_min,x_max,y_min,y_max,z_min,z_max,n_x,n_y,n_z,
 		//	false,false,false,8);
+	voro::container c = voro::container(1,1,1,1,1,1,1,1,1,true,true,true,1); 
 }
 
 vector<vec3> impactPoints::points() 

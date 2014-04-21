@@ -1,14 +1,7 @@
-﻿Build started 4/19/2014 3:51:43 PM.
+﻿Build started 4/21/2014 3:37:17 PM.
      1>Project "C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\JelloSim.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\DevIL1.6.7\include /I..\tinyxml /I..\glut /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt camera.cpp impactPoints.cpp perlin.cpp vec.cpp
-         Skipping... (no relevant changes detected)
-         vec.cpp
-         perlin.cpp
-         impactPoints.cpp
-         camera.cpp
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\James\Documents\GitHub\DynamicFracturing\Debug\DynamicFracture.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\DevIL1.6.7\lib /LIBPATH:..\tinyxml /LIBPATH:..\glut DevIL.lib ilu.lib ilut.lib glut32.lib tinyxmld_STL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\James\Documents\GitHub\DynamicFracturing\Debug\DynamicFracture.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\James\Documents\GitHub\DynamicFracturing\Debug\DynamicFracture.lib" /MACHINE:X86 Debug\camera.obj
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\James\Documents\GitHub\DynamicFracturing\Debug\DynamicFracture.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\DevIL1.6.7\lib /LIBPATH:..\Debug /LIBPATH:..\tinyxml /LIBPATH:..\glut DevIL.lib ilu.lib ilut.lib glut32.lib tinyxmld_STL.lib voro++.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\James\Documents\GitHub\DynamicFracturing\Debug\DynamicFracture.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\James\Documents\GitHub\DynamicFracturing\Debug\DynamicFracture.lib" /MACHINE:X86 Debug\camera.obj
          Debug\fps.obj
          Debug\fractureMesh.obj
          Debug\impactPoints.obj
@@ -22,4 +15,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.50
+Time Elapsed 00:00:00.43
