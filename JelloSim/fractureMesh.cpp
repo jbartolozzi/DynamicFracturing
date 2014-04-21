@@ -31,7 +31,7 @@ void fractureMesh::DrawEdge(edge e, const vec3& eyePos)
 
       glLineWidth(2.0); 
       glBegin(GL_LINES);
-         glColor3f(1.0, 0.0, 0.0);
+         glColor3f(1.0, 0.0, 1.0);
 		 glVertex3f(e.p1->pos[0], e.p1->pos[1], e.p1->pos[2]);
          glVertex3f(e.p2->pos[0], e.p2->pos[1], e.p2->pos[2]);
       glEnd();
@@ -48,14 +48,14 @@ void fractureMesh::setUpMesh()
 {
 
 	//Initialize vertices for cube
-	vertex* v1 = new vertex(vec3(0,0,0), 0);
-	vertex* v2 = new vertex(vec3(1,0,0), 1);
-	vertex* v3 = new vertex(vec3(1,1,0), 2);
-	vertex* v4 = new vertex(vec3(0,1,0), 3);
-	vertex* v5 = new vertex(vec3(0,0,-1), 4);
-	vertex* v6 = new vertex(vec3(1,0,-1), 5);
-	vertex* v7 = new vertex(vec3(1,1,-1), 6);
-	vertex* v8 = new vertex(vec3(0,1,-1), 7);
+	vertex* v1 = new vertex(vec3(-1,-1,-1), 0);
+	vertex* v2 = new vertex(vec3(1,-1,-1), 1);
+	vertex* v3 = new vertex(vec3(1,-1,1), 2);
+	vertex* v4 = new vertex(vec3(-1,-1,1), 3);
+	vertex* v5 = new vertex(vec3(-1,1,-1), 4);
+	vertex* v6 = new vertex(vec3(1,1,-1), 5);
+	vertex* v7 = new vertex(vec3(1,1,1), 6);
+	vertex* v8 = new vertex(vec3(-1,1,1), 7);
 
 	//Initialize edges
 	edge e1 = edge(v1, v2, 0);

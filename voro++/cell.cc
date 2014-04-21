@@ -1523,6 +1523,29 @@ void voronoicell_base::draw_gnuplot(double x,double y,double z,FILE *fp) {
 	reset_edges();
 }
 
+std::vector<vec3> voronoicell_base::vectorfrom_gnuplot(double x,double y,double z) {
+	std::vector<vec3> output;
+	int i,j,k,l,m;
+	for(i=1;i<p;i++) for(j=0;j<nu[i];j++) {
+		k=ed[i][j];
+		if(k>=0) {
+			//fprintf(fp,"%g %g %g\n",x+0.5*pts[3*i],y+0.5*pts[3*i+1],z+0.5*pts[3*i+2]);
+			output.push_back(vec3(x+0.5*pts[3*i],y+0.5*pts[3*i+1],z+0.5*pts[3*i+2]));
+			l=i;m=j;
+			do {
+				ed[k][ed[l][nu[l]+m]]=-1-l;
+				ed[l][m]=-1-k;
+				l=k;
+				//fprintf(fp,"%g %g %g\n",x+0.5*pts[3*k],y+0.5*pts[3*k+1],z+0.5*pts[3*k+2]);
+				output.push_back(vec3(x+0.5*pts[3*k],y+0.5*pts[3*k+1],z+0.5*pts[3*k+2]));
+			} while (search_edge(l,m,k));
+			//fputs("\n\n",fp);
+		}
+	}
+	reset_edges();
+	return output;
+}
+
 inline bool voronoicell_base::search_edge(int l,int &m,int &k) {
 	for(m=0;m<nu[l];m++) {
 		k=ed[l][m];

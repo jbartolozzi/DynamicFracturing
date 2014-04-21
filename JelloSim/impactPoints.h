@@ -15,6 +15,8 @@ public:
 	void draw();
 private:
 	vector<vec3> generatedPoints;
+	vector<vector<vec3>> voroPoints;
+	void cullVoroPoints();
 protected:
 	vector<vec3> points();
 };
