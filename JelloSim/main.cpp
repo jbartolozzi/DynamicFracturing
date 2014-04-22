@@ -143,7 +143,7 @@ void setRayVectors(int x, int y)
 		intPoint = rayA + temp*t;
 	} 
 	
-	ips = impactPoints(intPoint,vec3(1,1,1),100);
+	ips = impactPoints(intPoint,vec3(1,1,1),10);
 }
 
 void onMouseCb(int button, int state, int x, int y)
@@ -348,6 +348,7 @@ void onDrawCb()
 }
 
 // Load jello parameters from the config file
+/*
 int loadJelloParameters(char* filename) throw (char*)
 {
 	ifstream config;
@@ -468,18 +469,18 @@ int loadJelloParameters(char* filename) throw (char*)
 	} else {
 		return 1;    // fail to open file
 	}
-}
+}*/
 
 void init(void)
 {
-	screenWidth = 640;
+	screenWidth = 720;
 	screenHeight = 480;
 	perlinOffset = 0.f;
     initCamera();
 
 	rayA = vec3(0,0,0);
 	rayB = vec3(0,1,0);
-	showGrid = true;
+	showGrid = false;
     glClearColor(0.2, 0.2, 0.2, 1.0);
 
     glEnable(GL_BLEND);
@@ -564,12 +565,6 @@ int main(int argc, char **argv)
     //glutAttachMenu(GLUT_RIGHT_BUTTON);
 
 	init();
-	if (loadJelloParameters(argv[1]) != 0)
-	{
-		cout << "Failed to open configuration file" << endl;
-		system("pause");
-		return 1;
-	}
 
     glutMainLoop();
     return 0;             

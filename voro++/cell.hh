@@ -11,7 +11,7 @@
 #define VOROPP_CELL_HH
 
 #include <vector>
-
+#include "../JelloSim/vec.h"
 #include "config.hh"
 #include "common.hh"
 
@@ -111,6 +111,7 @@ class voronoicell_base {
 			draw_pov_mesh(x,y,z,fp);
 			fclose(fp);
 		}
+		std::vector<vec3> vectorfrom_gnuplot(double x,double y,double z);
 		void draw_gnuplot(double x,double y,double z,FILE *fp=stdout);
 		/** Outputs the cell in Gnuplot format a given file.
 		 * \param[in] (x,y,z) a displacement to add to the cell's

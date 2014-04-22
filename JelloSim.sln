@@ -8,7 +8,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DynamicFracture", "JelloSim
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tinyxmlSTL", "tinyxml\tinyxmlSTL.vcxproj", "{A3A84737-5017-4577-B8A2-79429A25B8B6}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "voro++", "voro++\voro++.vcxproj", "{E4C29FD4-A970-4B56-8BC8-4D5A1E0C756B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "voro++", "voro++\voro++.vcxproj", "{244CE3E8-BF48-4518-A24B-8B25E93A7842}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,10 +24,10 @@ Global
 		{A3A84737-5017-4577-B8A2-79429A25B8B6}.Debug|Win32.Build.0 = Debug|Win32
 		{A3A84737-5017-4577-B8A2-79429A25B8B6}.Release|Win32.ActiveCfg = Release|Win32
 		{A3A84737-5017-4577-B8A2-79429A25B8B6}.Release|Win32.Build.0 = Release|Win32
-		{E4C29FD4-A970-4B56-8BC8-4D5A1E0C756B}.Debug|Win32.ActiveCfg = Debug|Win32
-		{E4C29FD4-A970-4B56-8BC8-4D5A1E0C756B}.Debug|Win32.Build.0 = Debug|Win32
-		{E4C29FD4-A970-4B56-8BC8-4D5A1E0C756B}.Release|Win32.ActiveCfg = Release|Win32
-		{E4C29FD4-A970-4B56-8BC8-4D5A1E0C756B}.Release|Win32.Build.0 = Release|Win32
+		{244CE3E8-BF48-4518-A24B-8B25E93A7842}.Debug|Win32.ActiveCfg = Debug|Win32
+		{244CE3E8-BF48-4518-A24B-8B25E93A7842}.Debug|Win32.Build.0 = Debug|Win32
+		{244CE3E8-BF48-4518-A24B-8B25E93A7842}.Release|Win32.ActiveCfg = Release|Win32
+		{244CE3E8-BF48-4518-A24B-8B25E93A7842}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

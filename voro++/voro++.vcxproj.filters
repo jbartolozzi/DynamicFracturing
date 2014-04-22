@@ -15,6 +15,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="c_loops.hh">
       <Filter>Header Files</Filter>
     </None>
@@ -57,42 +60,6 @@
     <None Include="worklist.hh">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="Makefile.dep">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="Doxyfile">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="c_loops.o">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="cell.o">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="common.o">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="container.o">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="container_prd.o">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="pre_container.o">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="unitcell.o">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="v_base.o">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="v_compute.o">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="wall.o">
-      <Filter>Resource Files</Filter>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="c_loops.cc">
@@ -120,9 +87,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="v_base.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="v_base_wl.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="v_compute.cc">

@@ -9,8 +9,8 @@ impactPoints::impactPoints()
 impactPoints::impactPoints(vec3 impactLocation, vec3 force, int numPoints)
 {
 	Perlin *p = new Perlin(2,0.1,1,123);
-	float rSquared = force.Length();
-	rSquared *= rSquared;
+	float r = force.Length();
+	float rSquared = r*r;
 	generatedPoints = vector<vec3>();
 	for (unsigned int i = 0; i < numPoints; i++)
 	{
@@ -33,23 +33,47 @@ impactPoints::impactPoints(vec3 impactLocation, vec3 force, int numPoints)
 		}
 	}
 	delete p;
-	const double x_min=-1,x_max=1;
-	const double y_min=-1,y_max=1;
-	const double z_min=-1,z_max=1;
-	const double cvol=(x_max-x_min)*(y_max-y_min)*(x_max-x_min);
-	// vectror of generatedPoints
-	const int n_x=6,n_y=6,n_z=6;
-
-	// Set the number of particles that are going to be randomly introduced
-	const int particles=20;
-	int i;
-	double x,y,z;
 
 	// Create a container with the geometry given above, and make it
 	// non-periodic in each of the three coordinates. Allocate space for
 	// eight particles within each computational block
 	//voro::container con = voro::container(x_min,x_max,y_min,y_max,z_min,z_max,n_x,n_y,n_z,
 		//	false,false,false,8);
+	//SET THE VALUES OF THE CONTAINER BASED ON THE IMPACT LOCATION
+	//
+	const double x_min=-1,x_max=1;
+	const double y_min=-1,y_max=1;
+	const double z_min=-1,z_max=1;
+	const int n_x=3,n_y=3,n_z=3;
+	const double cvol=(x_max-x_min)*(y_max-y_min)*(x_max-x_min);
+	voro::container con(x_min,x_max,y_min,y_max,z_min,z_max,n_x,n_y,n_z,
+			false,false,false,8);
+	for(int i = 0; i < generatedPoints.size(); i++) 
+	{
+		double a = generatedPoints[i][0];
+		double b = generatedPoints[i][1];
+		double z = generatedPoints[i][2];
+		con.put(i,a,b,z);
+	}
+	voroPoints = con.output_voronoi_vertices(r/3,impactLocation,generatedPoints);
+	//cullVoroPoints(impactLocation, rSquared);
+}
+
+void impactPoints::cullVoroPoints(vec3 impactLocation, float rSquared)
+{
+	for(int i = 0; i < voroPoints.size(); i++) 
+	{
+		for(int j = 0; j < voroPoints[i].size(); j++)
+		{
+			float x = voroPoints[i][j][0];
+			float y = voroPoints[i][j][1];
+			float z = voroPoints[i][j][2];
+			float newX = x * sqrt(1-(y*y)/2 - (z*z)/2 + (y*y*z*z)/3);
+			float newY = y * sqrt(1-(z*z)/2 - (x*x)/2 + (z*z*x*x)/3);
+			float newZ = z * sqrt(1-(x*x)/2 - (y*y)/2 + (x*x*y*y)/3);
+			voroPoints[i][j] -= vec3(newX,newY,newZ);
+		}
+	}
 }
 
 vector<vec3> impactPoints::points() 
@@ -74,24 +98,22 @@ void impactPoints::draw()
 
 		glEnd();
 		glPopAttrib();
-		/* DRAW LINES
+		/* DRAW LINES */
 		glPushAttrib(GL_LIGHTING_BIT | GL_LINE_BIT);
 		glDisable(GL_LIGHTING);
 		glBegin(GL_LINES);
-		glColor3f(1.0,0,0);
-		for(int j = 0; j < generatedPoints.size(); j++)
+		glColor3f(0,1.0,0);
+		for(int i = 0; i < voroPoints.size(); i++)
 		{
-			for(int i = 0; i < generatedPoints.size();i++) 
+			for(int j = 0; j < voroPoints[i].size()-1; j++)
 			{
-				if (j != i)
-				{
-					glVertex3f(generatedPoints.at(j)[0],generatedPoints.at(j)[1],generatedPoints.at(j)[2]);
-					glVertex3f(generatedPoints.at(i)[0],generatedPoints.at(i)[1],generatedPoints.at(i)[2]);
-				}
+				glVertex3d(voroPoints[i][j][0],voroPoints[i][j][1],voroPoints[i][j][2]);
+				glVertex3d(voroPoints[i][j+1][0],voroPoints[i][j+1][1],voroPoints[i][j+1][2]);
+		
 			}
 		}
 		glEnd();
-		glPopAttrib();*/
+		glPopAttrib();
 	}
 }
 
