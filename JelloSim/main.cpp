@@ -11,11 +11,10 @@
 #include "jelloMesh.h"
 #include "world.h"
 #include "fractureMesh.h"
-#include "cube.h"
 #include "sphere.h"
 
 JelloMesh theJello;
-cube fracMesh;
+fractureMesh fracMesh;
 
 Camera theCamera;
 World theWorld("worlds/ground.xml");
@@ -139,7 +138,7 @@ void setRayVectors(int x, int y)
 	//get point of intersection
 	//if there is no intersection, we keep the old point for now
 	vec3 intersectionPoint;
-	if(fracMesh.intersect(rayA, temp, intersectionPoint))
+	if(fracMesh.intersection(rayA, temp, intersectionPoint))
 	{
 		ips = impactPoints(intersectionPoint,vec3(1,1,1),25);
 	}

@@ -27,3 +27,12 @@
 *.pdb
 *.idb
 *.tlog
+*.suo
+*.log
+*.pdb
+*.tlog
+*.filters
+*.log
+*.filters
+*.vcxproj
+JelloSim.v11.suo
