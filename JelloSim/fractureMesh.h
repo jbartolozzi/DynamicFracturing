@@ -14,14 +14,14 @@ public:
 	~fractureMesh(void);
 
     // Draw our FractureMesh
-    virtual void Draw(const vec3& eyePos);
-	virtual void DrawEdge(edge e, const vec3& eyePos);
+    void Draw(const vec3& eyePos);
+	void DrawEdge(edge e, const vec3& eyePos);
 
     // Reset to the initial state
     virtual void Reset();
 
 	//Sets up vertices and edges
-	void setUpMesh();
+	virtual void setUpMesh();
 
 	std::vector<edge> edges;
 	std::vector<vertex*> vertices;
