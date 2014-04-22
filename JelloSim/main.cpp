@@ -11,9 +11,11 @@
 #include "jelloMesh.h"
 #include "world.h"
 #include "fractureMesh.h"
+#include "cube.h"
+#include "sphere.h"
 
 JelloMesh theJello;
-fractureMesh fracMesh;
+cube fracMesh;
 
 Camera theCamera;
 World theWorld("worlds/ground.xml");

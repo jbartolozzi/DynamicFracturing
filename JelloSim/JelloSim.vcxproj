@@ -71,6 +71,7 @@
   <ItemGroup>
     <ClInclude Include="camera.h" />
     <ClInclude Include="clock.h" />
+    <ClInclude Include="cube.h" />
     <ClInclude Include="face.h" />
     <ClInclude Include="fps.h" />
     <ClInclude Include="fractureMesh.h" />
@@ -78,18 +79,21 @@
     <ClInclude Include="jelloMesh.h" />
     <ClInclude Include="matrix.h" />
     <ClInclude Include="perlin.h" />
+    <ClInclude Include="sphere.h" />
     <ClInclude Include="timer.h" />
     <ClInclude Include="vec.h" />
     <ClInclude Include="world.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="camera.cpp" />
+    <ClCompile Include="cube.cpp" />
     <ClCompile Include="fps.cpp" />
     <ClCompile Include="fractureMesh.cpp" />
     <ClCompile Include="impactPoints.cpp" />
     <ClCompile Include="jelloMesh.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="perlin.cpp" />
+    <ClCompile Include="sphere.cpp" />
     <ClCompile Include="vec.cpp" />
     <ClCompile Include="world.cpp" />
   </ItemGroup>

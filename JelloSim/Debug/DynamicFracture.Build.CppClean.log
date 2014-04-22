@@ -1,65 +1,81 @@
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\JELLOSIM\DEBUG\WALL.OBJ
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\JELLOSIM\DEBUG\CAMERA.OBJ
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\JELLOSIM\DEBUG\FPS.OBJ
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\JELLOSIM\DEBUG\IMPACTPOINTS.OBJ
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\JELLOSIM\DEBUG\JELLOMESH.OBJ
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\JELLOSIM\DEBUG\MAIN.OBJ
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\JELLOSIM\DEBUG\PERLIN.OBJ
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\JELLOSIM\DEBUG\VEC.OBJ
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\JELLOSIM\DEBUG\WORLD.OBJ
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\JELLOSIM\DEBUG\VC110.PDB
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\JELLOSIM\DEBUG\CELL.OBJ
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\JELLOSIM\DEBUG\CMD_LINE.OBJ
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\JELLOSIM\DEBUG\COMMON.OBJ
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\JELLOSIM\DEBUG\CONTAINER.OBJ
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\JELLOSIM\DEBUG\CONTAINER_PRD.OBJ
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\JELLOSIM\DEBUG\C_LOOPS.OBJ
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\JELLOSIM\DEBUG\PRE_CONTAINER.OBJ
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\JELLOSIM\DEBUG\UNITCELL.OBJ
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\JELLOSIM\DEBUG\VORO++.OBJ
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\JELLOSIM\DEBUG\V_BASE.OBJ
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\JELLOSIM\DEBUG\V_COMPUTE.OBJ
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\DEBUG\DYNAMICFRACTURE.ILK
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\DEBUG\DYNAMICFRACTURE.EXE
-C:\USERS\JAMES\DOCUMENTS\GITHUB\DYNAMICFRACTURING\DEBUG\DYNAMICFRACTURE.PDB
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\camera.obj
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\cell.obj
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\cmd_line.obj
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\common.obj
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\container.obj
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\container_prd.obj
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\c_loops.obj
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\fps.obj
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\impactPoints.obj
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\jelloMesh.obj
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\main.obj
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\perlin.obj
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\pre_container.obj
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\unitcell.obj
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\vec.obj
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\voro++.obj
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\v_base.obj
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\v_compute.obj
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\wall.obj
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\world.obj
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\cl.command.1.tlog
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\CL.read.1.tlog
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\CL.write.1.tlog
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\link-cvtres.read.1.tlog
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\link-cvtres.write.1.tlog
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\link-rc.read.1.tlog
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\link-rc.write.1.tlog
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\link.4784-cvtres.read.1.tlog
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\link.4784-cvtres.write.1.tlog
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\link.4784-rc.read.1.tlog
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\link.4784-rc.write.1.tlog
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\link.4784.read.1.tlog
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\link.4784.write.1.tlog
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\link.command.1.tlog
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\link.read.1.tlog
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\link.write.1.tlog
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\vc110.idb
-C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\Debug\vc110.pdb
-C:\Users\James\Documents\GitHub\DynamicFracturing\Debug\DynamicFracture.pdb
-C:\Users\James\Documents\GitHub\DynamicFracturing\Debug\DynamicFracture.exe
-C:\Users\James\Documents\GitHub\DynamicFracturing\Debug\DynamicFracture.ilk
+C:\USERS\EMRE TANIRGAN\DESKTOP\UPENN\CIS 563\DYNAMICFRACTURING\JELLOSIM\DEBUG\CAMERA.OBJ
+C:\USERS\EMRE TANIRGAN\DESKTOP\UPENN\CIS 563\DYNAMICFRACTURING\JELLOSIM\DEBUG\FPS.OBJ
+C:\USERS\EMRE TANIRGAN\DESKTOP\UPENN\CIS 563\DYNAMICFRACTURING\JELLOSIM\DEBUG\IMPACTPOINTS.OBJ
+C:\USERS\EMRE TANIRGAN\DESKTOP\UPENN\CIS 563\DYNAMICFRACTURING\JELLOSIM\DEBUG\JELLOMESH.OBJ
+C:\USERS\EMRE TANIRGAN\DESKTOP\UPENN\CIS 563\DYNAMICFRACTURING\JELLOSIM\DEBUG\MAIN.OBJ
+C:\USERS\EMRE TANIRGAN\DESKTOP\UPENN\CIS 563\DYNAMICFRACTURING\JELLOSIM\DEBUG\PERLIN.OBJ
+C:\USERS\EMRE TANIRGAN\DESKTOP\UPENN\CIS 563\DYNAMICFRACTURING\JELLOSIM\DEBUG\VEC.OBJ
+C:\USERS\EMRE TANIRGAN\DESKTOP\UPENN\CIS 563\DYNAMICFRACTURING\JELLOSIM\DEBUG\WORLD.OBJ
+C:\USERS\EMRE TANIRGAN\DESKTOP\UPENN\CIS 563\DYNAMICFRACTURING\JELLOSIM\DEBUG\VC110.PDB
+C:\USERS\EMRE TANIRGAN\DESKTOP\UPENN\CIS 563\DYNAMICFRACTURING\JELLOSIM\DEBUG\FRACTUREMESH.OBJ
+C:\USERS\EMRE TANIRGAN\DESKTOP\UPENN\CIS 563\DYNAMICFRACTURING\JELLOSIM\DEBUG\CUBE.OBJ
+C:\USERS\EMRE TANIRGAN\DESKTOP\UPENN\CIS 563\DYNAMICFRACTURING\JELLOSIM\DEBUG\SPHERE.OBJ
+C:\USERS\EMRE TANIRGAN\DESKTOP\UPENN\CIS 563\DYNAMICFRACTURING\DEBUG\DYNAMICFRACTURE.ILK
+C:\USERS\EMRE TANIRGAN\DESKTOP\UPENN\CIS 563\DYNAMICFRACTURING\DEBUG\DYNAMICFRACTURE.EXE
+C:\USERS\EMRE TANIRGAN\DESKTOP\UPENN\CIS 563\DYNAMICFRACTURING\DEBUG\DYNAMICFRACTURE.PDB
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\camera.obj
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\cube.obj
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\fps.obj
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\fractureMesh.obj
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\impactPoints.obj
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\jelloMesh.obj
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\main.obj
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\perlin.obj
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\sphere.obj
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\vec.obj
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\world.obj
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\cl.command.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\CL.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\CL.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link-cvtres.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link-cvtres.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link-rc.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link-rc.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.4024-cvtres.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.4024-cvtres.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.4024-rc.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.4024-rc.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.4024.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.4024.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.6388-cvtres.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.6388-cvtres.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.6388-rc.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.6388-rc.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.6388.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.6388.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7208-cvtres.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7208-cvtres.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7208-rc.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7208-rc.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7208.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7208.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7420-cvtres.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7420-cvtres.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7420-rc.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7420-rc.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7420.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7420.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7424-cvtres.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7424-cvtres.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7424-rc.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7424-rc.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7424.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7424.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7428-cvtres.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7428-cvtres.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7428-rc.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7428-rc.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7428.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.7428.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.812-cvtres.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.812-cvtres.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.812-rc.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.812-rc.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.812.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.812.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.command.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.read.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\link.write.1.tlog
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\vc110.idb
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\JelloSim\Debug\vc110.pdb
+C:\Users\Emre Tanirgan\Desktop\UPenn\CIS 563\DynamicFracturing\Debug\DynamicFracture.pdb
