@@ -136,12 +136,11 @@ void setRayVectors(int x, int y)
 	
 	//get point of intersection
 	//if there is no intersection, we keep the old point for now
-	float t = fracMesh.intersect(rayA, temp);
-	if(t != -1){
-		intPoint = rayA + temp*t;
-	} 
-	
-	ips = impactPoints(intPoint,vec3(0.5,0.5,0.5),10);
+	vec3 intersectionPoint;
+	if(fracMesh.intersect(rayA, temp, intersectionPoint))
+	{
+		ips = impactPoints(intersectionPoint,vec3(1,1,1),25);
+	}
 }
 
 void onMouseCb(int button, int state, int x, int y)

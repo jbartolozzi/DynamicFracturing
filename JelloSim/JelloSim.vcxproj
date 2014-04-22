@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="camera.cpp" />
+    <ClCompile Include="face.cpp" />
     <ClCompile Include="fps.cpp" />
     <ClCompile Include="fractureMesh.cpp" />
     <ClCompile Include="impactPoints.cpp" />
