@@ -18,8 +18,13 @@ struct edge
 class face {
 public:
 	void draw();
+	face();
+	face(vector<vertex*> vertices);
+	face(vertex *p1, vertex *p2, vertex *p3);
+	std::vector<vertex*> vertices; 
+	~face();
 private:
-	vector<edge> edges; 
+	
 	vec3 normal;
 	int index;
 protected:

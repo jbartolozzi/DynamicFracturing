@@ -57,6 +57,32 @@ void fractureMesh::setUpMesh()
 	vertex* v7 = new vertex(vec3(1,1,1), 6);
 	vertex* v8 = new vertex(vec3(-1,1,1), 7);
 
+	// initialize faces
+	face f1 = face(v1,v2,v3);
+	face f2 = face(v1,v3,v4);
+	face f3 = face(v5,v6,v7);
+	face f4 = face(v5,v7,v8);
+	face f5 = face(v2,v3,v7);
+	face f6 = face(v2,v7,v6);
+	face f7 = face(v4,v1,v5);
+	face f8 = face(v4,v5,v8);
+	face f9 = face(v3,v4,v8);
+	face f10 = face(v3,v8,v7);
+	face f11 = face(v1,v2,v6);
+	face f12 = face(v1,v6,v5);
+	faces.push_back(f1);
+	faces.push_back(f2);
+	faces.push_back(f3);
+	faces.push_back(f4);
+	faces.push_back(f5);
+	faces.push_back(f6);
+	faces.push_back(f7);
+	faces.push_back(f8);
+	faces.push_back(f9);
+	faces.push_back(f10);
+	faces.push_back(f11);
+	faces.push_back(f12);
+
 	//Initialize edges
 	edge e1 = edge(v1, v2, 0);
 	edge e2 = edge(v2, v3, 1);
@@ -97,75 +123,27 @@ void fractureMesh::setUpMesh()
 	*/
 }
 
-float fractureMesh::intersect(vec3 p0, vec3 v0)
+bool fractureMesh::intersect(vec3 p0, vec3 v0, vec3& intersectionPoint)
 {
-	
-	//vec3 min = vec3(-0.5, -0.5, -0.5);
-	//vec3 max = vec3(0.5, 0.5, 0.5);
-	vec3 min = vec3(0, 0, -1);
-	vec3 max = vec3(1, 1, 0);
-
-	float tmin = (min[0] - p0[0]) / v0[0];
-    float tmax = (max[0] - p0[0]) / v0[0];
-    if (tmin > tmax) {
-		float temp = tmin;
-		tmin = tmax;
-		tmax = temp;
+	bool output = false;
+	float minTValue = 10000;
+	vec3 O = p0;
+	vec3 D = v0;
+	vec3 E1,E2,Q,P,T,check;
+	for(int i = 0; i < faces.size(); i++)
+	{
+		E1 = faces[i].vertices[1]->pos - faces[i].vertices[0]->pos;
+		E2 = faces[i].vertices[2]->pos - faces[i].vertices[0]->pos;
+		T = O - faces[i].vertices[0]->pos;
+		P = D.Cross(E2);
+		Q = T.Cross(E1);
+		check = (1/(P*E1))*vec3(Q*E2,P*T,Q*D);
+		if (check[1] >= 0 && check[2] >= 0 && check[1]+check[2] <= 1)
+		{
+			if (check[0] < minTValue) minTValue = check[0];
+			output = true;
+		}
 	}
-    float tymin = (min[1] - p0[1]) / v0[1];
-    float tymax = (max[1] - p0[1]) / v0[1];
-    if (tymin > tymax) {
-		float temp = tymin;
-		tymin = tymax;
-		tymax = temp;
-	}
-    if ((tmin > tymax) || (tymin > tmax)){
-        return -1;
-	}
-    if (tymin > tmin){
-        tmin = tymin;
-	}
-    if (tymax < tmax){
-        tmax = tymax;
-	}
-    float tzmin = (min[2] - p0[2]) / v0[2];
-    float tzmax = (max[2] - p0[2]) / v0[2];
-    if (tzmin > tzmax) {
-		float temp = tzmin;
-		tzmin = tzmax;
-		tzmax = temp;
-	}
-    if ((tmin > tzmax) || (tzmin > tmax)){
-        return -1;
-	}
-    if (tzmin > tmin){
-        tmin = tzmin;
-	}
-    if (tzmax < tmax){
-        tmax = tzmax;
-	}
-
-	//Enable this part to set intersection normal -- not sure if it'd be useful later
-	/*
-	vec3 intPoint = p0 + tmin*v0;
-	if(intPoint[1] <= 1.01 && intPoint[1] >= 0.99){
-		intNormal = vec3(0,1,0);
-	}
-	else if(intPoint[1] >= -1.01 && intPoint[1] <= -0.99){
-		intNormal = vec3(0,-1,0);
-	}
-	else if(intPoint[0] <= 1.01 && intPoint[0] >= 0.99){
-		intNormal = vec3(1,0,0);
-	}
-	else if(intPoint[0] >= -1.01 && intPoint[0] <= -0.99){
-		intNormal = vec3(-1,0,0);
-	}
-	else if(intPoint[2] <= 1.01 && intPoint[2] >= 0.99){
-		intNormal = vec3(0,0,1);
-	}
-	else if(intPoint[2] >= -1.01 && intPoint[2] <= -0.99){
-		intNormal = vec3(0,0,-1);
-	}*/
-
-	return tmin;
+	intersectionPoint = p0 + minTValue * v0;
+	return output;
 }
