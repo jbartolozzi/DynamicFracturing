@@ -141,7 +141,7 @@ void setRayVectors(int x, int y)
 		intPoint = rayA + temp*t;
 	} 
 	
-	ips = impactPoints(intPoint,vec3(1,1,1),10);
+	ips = impactPoints(intPoint,vec3(0.5,0.5,0.5),10);
 }
 
 void onMouseCb(int button, int state, int x, int y)
