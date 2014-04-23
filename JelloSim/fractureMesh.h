@@ -28,7 +28,7 @@ public:
 	std::vector<face> faces;
 
 	//Returns t value for intersection with a given ray
-	bool intersect(vec3 p0, vec3 v0, vec3& intersectionPoint);
+	bool intersection(vec3 p0, vec3 v0, vec3& intersectionPoint);
 
 };
 
