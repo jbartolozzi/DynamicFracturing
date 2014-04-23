@@ -11,6 +11,7 @@
 #include "jelloMesh.h"
 #include "world.h"
 #include "fractureMesh.h"
+#include "cube.h"
 #include "sphere.h"
 
 JelloMesh theJello;
@@ -22,6 +23,10 @@ mmc::FpsTracker theFpsTracker;
 impactPoints ips,ips2;
 bool showGrid;
 float perlinOffset;
+
+//How do we want to deal with frames?
+int frame=0;
+bool paused = false;
 
 // ray vectors for intersection purposes
 vec3 rayA,rayB;
@@ -138,9 +143,10 @@ void setRayVectors(int x, int y)
 	//get point of intersection
 	//if there is no intersection, we keep the old point for now
 	vec3 intersectionPoint;
-	if(fracMesh.intersection(rayA, temp, intersectionPoint))
+	if(fracMesh.intersect(rayA, temp, intersectionPoint))
 	{
 		ips = impactPoints(intersectionPoint,vec3(1,1,1),25);
+		frame = 0;
 	}
 }
 
@@ -176,6 +182,7 @@ void onKeyboardCb(unsigned char key, int x, int y)
    else if (key == '5') mask = theJello.SHEAR;
    else if (key == '6') mask = theJello.BEND;
    else if (key == 'g') showGrid = !showGrid;
+   else if (key == 'p') paused = !paused;
 
    if (mask)
    {
@@ -337,7 +344,10 @@ void onDrawCb()
     glLightfv(GL_LIGHT0, GL_POSITION, pos);
 
 	theWorld.Draw();
-	ips.draw();
+	ips.draw(frame);
+	if(!paused){
+		frame++;
+	}
 	//ips2.draw();
     //theJello.Draw(cpos);
 	fracMesh.Draw(cpos);
