@@ -1,5 +1,24 @@
-﻿Build started 4/21/2014 11:53:37 PM.
+﻿Build started 4/23/2014 1:53:44 PM.
+     1>Project "C:\Users\Max\Documents\GitHub\DynamicFracturing\tinyxml\tinyxmlSTL.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W4 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D TIXML_USE_STL /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug_STL/" /Fd".\Debug_STL/vc110.pdb" /FR".\Debug_STL\\" /Gd /TP /analyze- /errorReport:prompt tinystr.cpp tinyxml.cpp tinyxmlerror.cpp tinyxmlparser.cpp
+         tinyxmlparser.cpp
+         tinyxmlerror.cpp
+         tinyxml.cpp
+         tinystr.cpp
+         Generating Code...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(1299,5): warning MSB8012: TargetPath(C:\Users\Max\Documents\GitHub\DynamicFracturing\tinyxml\.\tinyxmlSTL.lib) does not match the Library's OutputFile property value (C:\Users\Max\Documents\GitHub\DynamicFracturing\tinyxml\tinyxmld_STL.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(1301,5): warning MSB8012: TargetName(tinyxmlSTL) does not match the Library's OutputFile property value (tinyxmld_STL). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"tinyxmld_STL.lib" /NOLOGO .\Debug_STL/tinystr.obj
+         .\Debug_STL/tinyxml.obj
+         .\Debug_STL/tinyxmlerror.obj
+         .\Debug_STL/tinyxmlparser.obj
+         tinyxmlSTL.vcxproj -> C:\Users\Max\Documents\GitHub\DynamicFracturing\tinyxml\.\tinyxmlSTL.lib
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\bscmake.exe /nologo /o".\Debug_STL/tinyxmlSTL.bsc" .\Debug_STL\tinystr.sbr .\Debug_STL\tinyxml.sbr .\Debug_STL\tinyxmlerror.sbr .\Debug_STL\tinyxmlparser.sbr
+     1>Done Building Project "C:\Users\Max\Documents\GitHub\DynamicFracturing\tinyxml\tinyxmlSTL.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.01
+Time Elapsed 00:00:09.30

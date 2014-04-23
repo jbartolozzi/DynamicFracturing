@@ -71,6 +71,7 @@
   <ItemGroup>
     <ClInclude Include="camera.h" />
     <ClInclude Include="clock.h" />
+    <ClInclude Include="cube.h" />
     <ClInclude Include="face.h" />
     <ClInclude Include="fps.h" />
     <ClInclude Include="fractureMesh.h" />
@@ -84,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="camera.cpp" />
+    <ClCompile Include="cube.cpp" />
     <ClCompile Include="face.cpp" />
     <ClCompile Include="fps.cpp" />
     <ClCompile Include="fractureMesh.cpp" />

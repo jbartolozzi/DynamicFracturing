@@ -15,6 +15,13 @@ struct edge
 	int index;
 	edge(vertex* _p1, vertex* _p2, int _index){p1 = _p1; p2 = _p2; index = _index;}
 };
+struct tri
+{
+	vec3 p1;
+	vec3 p2;
+	vec3 p3;
+	tri(vec3 _p1, vec3 _p2, vec3 _p3){p1 = _p1; p2 = _p2; p3 = _p3;}
+};
 class face {
 public:
 	void draw();
@@ -22,6 +29,8 @@ public:
 	face(vector<vertex*> vertices);
 	face(vertex *p1, vertex *p2, vertex *p3);
 	std::vector<vertex*> vertices; 
+	std::vector<tri> triangles;
+	void triangulate();
 	~face();
 private:
 	

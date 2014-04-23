@@ -46,7 +46,7 @@ void fractureMesh::Reset()
 
 void fractureMesh::setUpMesh()
 {
-	/*
+	
 	//Initialize vertices for cube
 	vertex* v1 = new vertex(vec3(-1,-1,-1), 0);
 	vertex* v2 = new vertex(vec3(1,-1,-1), 1);
@@ -120,7 +120,7 @@ void fractureMesh::setUpMesh()
 	edges.push_back(e10);
 	edges.push_back(e11);
 	edges.push_back(e12);
-	*/
+	
 }
 
 bool fractureMesh::intersect(vec3 p0, vec3 v0, vec3& intersectionPoint)

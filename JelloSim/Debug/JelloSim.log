@@ -1,48 +1,107 @@
-﻿Build started 4/21/2014 11:50:55 PM.
-     1>Project "C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\JelloSim.vcxproj" on node 2 (Build target(s)).
+﻿Build started 4/23/2014 1:53:53 PM.
+     1>Project "C:\Users\Max\Documents\GitHub\DynamicFracturing\JelloSim\JelloSim.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\DevIL1.6.7\include /I..\voro++ /I..\tinyxml /I..\glut /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\DevIL1.6.7\include /I..\voro++ /I..\tinyxml /I..\glut /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt camera.cpp cube.cpp face.cpp fps.cpp fractureMesh.cpp impactPoints.cpp jelloMesh.cpp main.cpp perlin.cpp vec.cpp world.cpp
+         world.cpp
+         vec.cpp
+         perlin.cpp
          main.cpp
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(234): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-                 c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(314) : see reference to class template instantiation 'math::matrix<T>' being compiled
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(235): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(242): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(243): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(244): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(247): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(258): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(259): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(260): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(261): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(262): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(264): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(444): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(454): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(516): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(529): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(553): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(586): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(611): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(620): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(646): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(663): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(670): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(677): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(701): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(709): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(756): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(885): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(938): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(972): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(987): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(1153): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\matrix.h(1161): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
-     1>c:\users\james\documents\github\dynamicfracturing\voro++\common.hh(53): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(234): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+                 c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(314) : see reference to class template instantiation 'math::matrix<T>' being compiled
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(235): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(242): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(243): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(244): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(247): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(258): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(259): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(260): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(261): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(262): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(264): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(444): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(454): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(516): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(529): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(553): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(586): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(611): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(620): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(646): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(663): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(670): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(677): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(701): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(709): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(756): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(885): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(938): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(972): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(987): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(1153): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(1161): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\voro++\common.hh(53): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
-     1>c:\users\james\documents\github\dynamicfracturing\jellosim\main.cpp(259): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\main.cpp(267): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+         jelloMesh.cpp
+         impactPoints.cpp
+     1>c:\users\max\documents\github\dynamicfracturing\voro++\common.hh(53): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\impactpoints.cpp(17): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\impactpoints.cpp(53): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\impactpoints.cpp(66): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\impactpoints.cpp(68): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\impactpoints.cpp(96): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\impactpoints.cpp(108): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\impactpoints.cpp(113): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\impactpoints.cpp(127): warning C4018: '<' : signed/unsigned mismatch
+         fractureMesh.cpp
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\fracturemesh.cpp(20): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\fracturemesh.cpp(133): warning C4018: '<' : signed/unsigned mismatch
+         fps.cpp
+         face.cpp
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\face.cpp(38): warning C4018: '<' : signed/unsigned mismatch
+         cube.cpp
+         camera.cpp
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(234): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+                 c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(314) : see reference to class template instantiation 'math::matrix<T>' being compiled
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(235): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(242): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(243): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(244): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(247): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(258): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(259): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(260): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(261): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(262): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(264): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(444): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(454): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(516): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(529): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(553): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(586): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(611): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(620): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(646): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(663): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(670): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(677): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(701): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(709): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(756): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(885): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(938): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(972): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(987): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(1153): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\max\documents\github\dynamicfracturing\jellosim\matrix.h(1161): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\James\Documents\GitHub\DynamicFracturing\Debug\DynamicFracture.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\DevIL1.6.7\lib /LIBPATH:..\Debug /LIBPATH:..\tinyxml /LIBPATH:..\glut DevIL.lib ilu.lib ilut.lib glut32.lib tinyxmld_STL.lib voro++.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\James\Documents\GitHub\DynamicFracturing\Debug\DynamicFracture.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\James\Documents\GitHub\DynamicFracturing\Debug\DynamicFracture.lib" /MACHINE:X86 Debug\camera.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Max\Documents\GitHub\DynamicFracturing\Debug\DynamicFracture.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\DevIL1.6.7\lib /LIBPATH:..\Debug /LIBPATH:..\tinyxml /LIBPATH:..\glut DevIL.lib ilu.lib ilut.lib glut32.lib tinyxmld_STL.lib voro++.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Max\Documents\GitHub\DynamicFracturing\Debug\DynamicFracture.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Max\Documents\GitHub\DynamicFracturing\Debug\DynamicFracture.lib" /MACHINE:X86 Debug\camera.obj
+         Debug\cube.obj
          Debug\face.obj
          Debug\fps.obj
          Debug\fractureMesh.obj
@@ -52,9 +111,10 @@
          Debug\perlin.obj
          Debug\vec.obj
          Debug\world.obj
-         JelloSim.vcxproj -> C:\Users\James\Documents\GitHub\DynamicFracturing\Debug\DynamicFracture.exe
-     1>Done Building Project "C:\Users\James\Documents\GitHub\DynamicFracturing\JelloSim\JelloSim.vcxproj" (Build target(s)).
+     1>voro++.lib(voro++.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'voro++.lib(voro++.obj)' or at 'C:\Users\Max\Documents\GitHub\DynamicFracturing\Debug\vc110.pdb'; linking object as if no debug info
+         JelloSim.vcxproj -> C:\Users\Max\Documents\GitHub\DynamicFracturing\Debug\DynamicFracture.exe
+     1>Done Building Project "C:\Users\Max\Documents\GitHub\DynamicFracturing\JelloSim\JelloSim.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.28
+Time Elapsed 00:00:28.71
