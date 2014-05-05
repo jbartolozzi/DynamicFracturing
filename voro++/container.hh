@@ -330,7 +330,7 @@ class container : public container_base, public radius_mono {
 				fprintf(fp,"%d %g %g %g\n",id[vl.ijk][vl.q],*pp,pp[1],pp[2]);
 			} while(vl.inc());
 		}
-		std::vector<std::vector<vec3>> output_voronoi_vertices(float r,vec3 impactLocation, std::vector<vec3> generatedPoints){
+		std::vector<std::vector<std::vector<vec3>>> output_voronoi_vertices(float r,vec3 impactLocation, std::vector<vec3> generatedPoints){
 			/*
 				voronoicell c;double *pp;
 				if(vl.start()) do if(compute_cell(c,vl)) {
@@ -338,7 +338,7 @@ class container : public container_base, public radius_mono {
 					c.draw_gnuplot(*pp,pp[1],pp[2],fp);
 				} while(vl.inc());
 				*/
-			std::vector<std::vector<vec3>> output;
+			std::vector<std::vector<std::vector<vec3>>> output;
 			c_loop_all vl(*this);
 			voronoicell c;
 			double *pp;
@@ -348,10 +348,11 @@ class container : public container_base, public radius_mono {
 				pp=p[vl.ijk]+ps*vl.q;
 				//c.init(-r,r,-r,r,-r,r);
 				//c.plane(generatedPoints[index][0],generatedPoints[index][1],generatedPoints[index][2]);
-				std::vector<vec3> faceVerts = c.vectorfrom_gnuplot(*pp,pp[1],pp[2]);
+				std::vector<std::vector<vec3>> faceVerts = c.vectorfrom_gnuplot(*pp,pp[1],pp[2]);
 				output.push_back(faceVerts);
 				//c.draw_gnuplot(*pp,pp[1],pp[2],fp);
 				index++;
+				//break;
 			} while(vl.inc());
 			return output;
 		}

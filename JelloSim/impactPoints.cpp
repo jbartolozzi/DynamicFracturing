@@ -8,6 +8,8 @@ impactPoints::impactPoints()
 
 impactPoints::impactPoints(vec3 impactLocation, vec3 force, int numPoints)
 {
+	//store impact point
+	impactPoint = impactLocation;
 	Perlin *p = new Perlin(2,0.1,1,123);
 	float r = force.Length();
 	float rSquared = r*r;
@@ -61,7 +63,7 @@ impactPoints::impactPoints(vec3 impactLocation, vec3 force, int numPoints)
 
 void impactPoints::cullVoroPoints(vec3 impactLocation, float rSquared)
 {
-	for(int i = 0; i < voroPoints.size(); i++) 
+	/*for(int i = 0; i < voroPoints.size(); i++) 
 	{
 		for(int j = 0; j < voroPoints[i].size(); j++)
 		{
@@ -73,7 +75,7 @@ void impactPoints::cullVoroPoints(vec3 impactLocation, float rSquared)
 			float newZ = z * sqrt(1-(x*x)/2 - (y*y)/2 + (x*x*y*y)/3);
 			voroPoints[i][j] -= vec3(newX,newY,newZ);
 		}
-	}
+	}*/
 }
 
 vector<vec3> impactPoints::points() 
@@ -82,7 +84,7 @@ vector<vec3> impactPoints::points()
 }
 
 // draw points
-void impactPoints::draw()
+void impactPoints::draw(int frame)
 {
 	if (generatedPoints.size() > 0){
 		glPushAttrib(GL_LIGHTING_BIT | GL_LINE_BIT);
@@ -105,11 +107,32 @@ void impactPoints::draw()
 		glColor3f(0,1.0,0);
 		for(int i = 0; i < voroPoints.size(); i++)
 		{
-			for(int j = 0; j < voroPoints[i].size()-1; j++)
+			//initialize center of mass
+			vec3 com = vec3(0.0,0.0,0.0);
+			int points=0;
+			for(int j = 0; j < voroPoints[i].size(); j++)
 			{
-				glVertex3d(voroPoints[i][j][0],voroPoints[i][j][1],voroPoints[i][j][2]);
-				glVertex3d(voroPoints[i][j+1][0],voroPoints[i][j+1][1],voroPoints[i][j+1][2]);
+				for(int k = 0; k < voroPoints[i][j].size();k++) {
+					com  += vec3(voroPoints[i][j][k][0],voroPoints[i][j][k][1],voroPoints[i][j][k][2]);
+					//com+= vec3(voroPoints[i][j+1][0],voroPoints[i][j+1][1],voroPoints[i][j+1][2]);
+					points+=1;
+				}
 		
+			}
+			com/=(double)points;
+			//set vel in proportion to distance from impact point
+			vec3 vel = com*frame;//-impactPoint;
+			double speed = 0.1;
+			vel[0] = speed*vel[0];
+			vel[1] = speed*vel[1];
+			vel[2] = speed*vel[2];
+			for(int j = 0; j < voroPoints[i].size(); j++)
+			{
+				for(int k = 0; k < voroPoints[i][j].size()-1; k++)
+				{
+					glVertex3d(voroPoints[i][j][k][0]+vel[0],voroPoints[i][j][k][1]+vel[1],voroPoints[i][j][k][2]+vel[2]);
+					glVertex3d(voroPoints[i][j][k+1][0]+vel[0],voroPoints[i][j][k+1][1]+vel[1],voroPoints[i][j][k+1][2]+vel[2]);
+				}
 			}
 		}
 		glEnd();
